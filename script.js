@@ -11,12 +11,12 @@ function bloquearBotoes(bloquear) {
 btnJogoNumero.addEventListener('click', () => {
     bloquearBotoes(true);
     alert('Seja bem-vindo ao nosso jogo!');
-    const numeroSecreto = Math.floor(Math.random() * 100) + 1;
+    const numeroSecreto = Math.floor(Math.random() * 10) + 1;
     let chute;
     let tentativas = 0;
 
     while (chute != numeroSecreto) {
-        chute = parseInt(prompt('Escolha um número entre 1 e 100'));
+        chute = parseInt(prompt('Escolha um número entre 1 e 10'));
         tentativas++;
         if (chute == numeroSecreto) {
             alert(`Parabéns! Você acertou o número secreto ${numeroSecreto} na tentativa ${tentativas}.`);
@@ -47,15 +47,15 @@ btnSomaNumeros.addEventListener('click', () => {
 
 btnCalcNotas.addEventListener('click', () => {
     bloquearBotoes(true);
-    alert('Seja bem-vindo à calculadora de notas!');
-    let qtdNotas = parseInt(prompt('Digite a quantidade de Notas que compõem a média'));
-    if (qtdNotas > 0) {
+    alert('Seja bem-vindo à calculadora de média simples!');
+    let qtdValores = parseInt(prompt('Digite a quantidade de Valores que compõem a média'));
+    if (qtdValores > 0) {
         do {
             let media = 0;
-            for (let i = 0; i < qtdNotas; i++) {
+            for (let i = 0; i < qtdValores; i++) {
                 media += parseInt(prompt(`Digite a ${i+1}ª nota`));
             }
-            media /= qtdNotas;
+            media /= qtdValores;
             if (media >= 6) {
                 alert(`Aluno foi aprovado com média final ${media}`);
             } else {
