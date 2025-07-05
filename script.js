@@ -70,8 +70,7 @@ btnCalcNotas.addEventListener('click', () => {
         }
     }
     let media = soma / quantidade;
-
     // Aqui está o uso correto da template string com crase:
-    alert(`A média calculada entre os ${quantidade} números digitados é: ${media.toFixed(2)}`);
+    alert(`A média calculada entre os ${quantidade} números digitados é: ${media}`);
     bloquearBotoes(false);
 });
