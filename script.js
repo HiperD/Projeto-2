@@ -1,6 +1,6 @@
 function iniciarJogoAdivinha(){
     alert('Seja bem-vindo ao nosso jogo!');
-    let numeroSecreto = 5;
+    let numeroSecreto = Math.floor(Math.random() * 10) + 1;
     console.log(numeroSecreto);
     let chute;
     let tentativas = 0;
