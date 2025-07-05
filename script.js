@@ -57,7 +57,7 @@ btnCalcNotas.addEventListener('click', () => {
     }
     else {
         let soma = 0;
-        for (let i = 1; i < quantidade; i++) {
+        for (let i = 1; i <= quantidade; i++) {
             let entrada = prompt(`Digite o ${i}º número:`);
             let numero = Number(entrada);
 
